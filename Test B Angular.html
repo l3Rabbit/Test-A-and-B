@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+<style>
+    .row {
+        display: flex;
+    }
+
+    .row>div {
+        flex: 1;
+        border-right: 1px solid grey;
+        border-bottom: 1px solid grey;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+<body>
+    <div ng-app="app" ng-controller="foo">
+        <h4 class="text text-center">Test B with Angular</h4>
+        <br>
+        <br>
+        <div class='row'>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <div style="border-bottom:1px solid grey;">Sun</div>
+                <br>
+                <div ng-repeat="result in results" ng-init="Birthday = (result.birthday.dmy.split('/').reverse().join('-')|date:'EEE')">
+                    <div ng-if="Birthday == 'Sun'">
+                        <img src="{{result.photo}}" alt=""> {{result.name}}
+                        <!-- {{result.birthday.dmy.split('/').reverse().join('-')|date:'EEE'}} -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <div style="border-bottom:1px solid grey;">Mon</div>
+                <br>
+                <div ng-repeat="result in results" ng-init="Birthday = (result.birthday.dmy.split('/').reverse().join('-')|date:'EEE')">
+                    <div ng-if="Birthday == 'Mon'">
+                        <img src="{{result.photo}}" alt=""> {{result.name}}
+                        <!-- {{result.birthday.dmy.split('/').reverse().join('-')|date:'EEE'}} -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <div style="border-bottom:1px solid grey;">Tue</div>
+                <br>
+                <div ng-repeat="result in results" ng-init="Birthday = (result.birthday.dmy.split('/').reverse().join('-')|date:'EEE')">
+                    <div ng-if="Birthday == 'Tue'">
+                        <img src="{{result.photo}}" alt=""> {{result.name}}
+                        <!-- {{result.birthday.dmy.split('/').reverse().join('-')|date:'EEE'}} -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <div style="border-bottom:1px solid grey;">Wed</div>
+                <br>
+                <div ng-repeat="result in results" ng-init="Birthday = (result.birthday.dmy.split('/').reverse().join('-')|date:'EEE')">
+                    <div ng-if="Birthday == 'Wed'">
+                        <img src="{{result.photo}}" alt=""> {{result.name}}
+                        <!-- {{result.birthday.dmy.split('/').reverse().join('-')|date:'EEE'}} -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <div style="border-bottom:1px solid grey;">Thu</div>
+                <br>
+                <div ng-repeat="result in results" ng-init="Birthday = (result.birthday.dmy.split('/').reverse().join('-')|date:'EEE')">
+                    <div ng-if="Birthday == 'Thu'">
+                        <img src="{{result.photo}}" alt=""> {{result.name}}
+                        <!-- {{result.birthday.dmy.split('/').reverse().join('-')|date:'EEE'}} -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <div style="border-bottom:1px solid grey;">Fri</div>
+                <br>
+                <div ng-repeat="result in results" ng-init="Birthday = (result.birthday.dmy.split('/').reverse().join('-')|date:'EEE')">
+                    <div ng-if="Birthday == 'Fri'">
+                        <img src="{{result.photo}}" alt=""> {{result.name}}
+                        <!-- {{result.birthday.dmy.split('/').reverse().join('-')|date:'EEE'}} -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <div style="border-bottom:1px solid grey;">Sat</div>
+                <br>
+                <div ng-repeat="result in results" ng-init="Birthday = (result.birthday.dmy.split('/').reverse().join('-')|date:'EEE')">
+                    <div ng-if="Birthday == 'Sat'">
+                        <img src="{{result.photo}}" alt=""> {{result.name}}
+                        <!-- {{result.birthday.dmy.split('/').reverse().join('-')|date:'EEE'}} -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+</body>
+
+<script>
+    angular.module("app", []).controller('foo', function ($scope, $http) {
+        $scope.s = {};
+        $scope.Sun = 'Sun';
+
+        $scope.cashsummary = function () {
+            // var url = serviceBase + cashSummaryUrl;
+            var url = 'http://uinames.com/api/?ext&amount=25';
+
+            $http.get(url).success(function (data) {
+                $scope.results = data;
+            })
+        };
+
+        $scope.day = function () {
+            $scope.s = $scope.result.birthday.dmy;
+            return $scope.s.split("/").reverse().join("-");
+        }
+        $scope.cashsummary();
+    });
+</script>
+
+</html>
